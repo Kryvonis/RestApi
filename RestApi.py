@@ -64,7 +64,6 @@ class PostModel(db.Model):
         return {
             'title': self.title,
             'body': self.body,
-            'creator': self.creator
         }
 
 
@@ -134,7 +133,7 @@ def get_posts():
 
     if page < 1:
         page = 1
-    if page > page_count:
+    if not page_count == 0 and page > page_count:
         abort(400)
     bottom_bound = (page - 1) * items_per_page
     top_bound = page * items_per_page
