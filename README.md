@@ -1,35 +1,35 @@
-# RestApi
+RestApi
+=======
 
 verison 1.0
 
-"""
-create user: /api/user method POST. Require two fields -email and -password
-/api/user POST
+- create user: /api/user method POST. Require two fields -email and -password
 
+/api/user POST
 {
 "email":"test@gmail.com"
 "password":"test"
 }
 
-'get auth token': 'api/token method GET. Require -email and -password from user',
+- 'get auth token': 'api/token method GET. Require -email and -password from user',
 /api/token GET
 {
 "token":eyJleHAiOjE0NjgyNzYwNDksImFsZyI6IkhTMjU2IiwiaWF0IjoxNDY4Mjc1NDQ5fQ.eyJpZCI6MX0.zZTMGcs-fr-bT4Bvm124oTeJuiSaw3nBqbBad18_GHo
 }
 
-'create post': '/api/post method POST. Require one field -title and one optional -body field ',
+- 'create post': '/api/post method POST. Require one field -title and one optional -body field ',
 /api/post POST
 {
 "title":"Post1"
 "body":"Body1"
 }
-'get users profile': '/api/user method GET. Require -token or -email and -password',
+- 'get users profile': '/api/user method GET. Require -token or -email and -password',
 /api/user GET
 {
 "id":"1"
 "email":"test@gmail.com"
 }
-'get users posts': '/api/posts method GET. Require -token or -email and -password',
+- 'get users posts': '/api/posts method GET. Require -token or -email and -password',
 /api/posts GET
 {
 "posts":
@@ -39,7 +39,7 @@ create user: /api/user method POST. Require two fields -email and -password
       }
 }
 
-'get all posts': '/api/post/all meghod GET.Require -token or -email and -password. Paging added',
+- 'get all posts': '/api/post/all meghod GET.Require -token or -email and -password. Paging added',
 {
 {
   "items": [
@@ -58,7 +58,7 @@ create user: /api/user method POST. Require two fields -email and -password
 }
 
 }
-'post search': '/api/post/search method GET.Require argument -q'
+- 'post search': '/api/post/search method GET.Require argument -q'
 /api/post/search?q='Pos'
 {
 "items":[{
@@ -66,4 +66,3 @@ create user: /api/user method POST. Require two fields -email and -password
         "body":"Body1"
         }]
 }
-"""
