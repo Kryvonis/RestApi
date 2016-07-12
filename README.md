@@ -3,8 +3,9 @@
 verison 1.0
 
 
-'create user': '/api/user method POST. Require two fields -email and -password',
+create user: /api/user method POST. Require two fields -email and -password
 /api/user POST
+
 {
 "email":"test@gmail.com"
 "password":"test"
