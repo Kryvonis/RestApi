@@ -166,7 +166,7 @@ def get_post_search():
     try:
         posts = db.engine.execute('SELECT "id","title","body","creator" '
                                   'FROM "post_model" '
-                                  'WHERE "title" LIKE "{0}" OR "body" LIKE "{0}" OR "creator" LIKE "{0}"'.format(search)
+                                  'WHERE "title" LIKE "%{0}%" OR "body" LIKE "%{0}%" OR "creator" LIKE "%{0}%"'.format(search)
                                   )
     except:
         abort(400)
