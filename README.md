@@ -1,16 +1,20 @@
-RestApi
-=======
+#RestApi
+created by [Artem K.](https://github.com/Kryvonis)
+
+follow me on facebook [Artem K.](https://www.facebook.com/artem.kryvonis)
+
+RestApi wrighting on Flask
 
 verison 1.0
 
 - create user: /api/user method POST. Require two fields -email and -password
 
 
-/api/user POST
+`/api/user POST
 {
 "email":"test@gmail.com"
 "password":"test"
-}
+}`
 
 
 - 'get auth token': 'api/token method GET. Require -email and -password from user',/api/token GET
